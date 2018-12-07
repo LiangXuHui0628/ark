@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ark</artifactId>
+        <groupId>com.siro</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>com.siro.ark.web</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.sitemesh</groupId>
+            <artifactId>sitemesh</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>26.0-jre</version>
+        </dependency>
+
+        <!-- developer core -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer core -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer core -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.comm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer touch.api -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.touch.api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer res -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.res</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer admin -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.admin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer user center -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.user.center</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer blog -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.blog</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- developer support -->
+        <dependency>
+            <groupId>com.siro</groupId>
+            <artifactId>com.siro.ark.developer.support</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

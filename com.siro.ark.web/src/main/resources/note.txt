@@ -1,0 +1,4 @@
+
+maven本地安装
+
+mvn install:install-file -Dfile=/Users/liangxuhui/Downloads/AXmlResourceParser.jar -DgroupId=com.apk -DartifactId=com.apk.parser -Dversion=1.0.0 -Dpackaging=jar

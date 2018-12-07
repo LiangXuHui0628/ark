@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.siro.ark.dao.ArkDevApkVersionDao">
+
+    <resultMap type="ArkDevApkVersion" id="ArkDevApkVersionMaps">
+        <id column="id" property="id"/>
+        <result column="version_code" property="versionCode"/>
+        <result column="version_name" property="versionName"/>
+        <result column="release_date" property="releaseDate"/>
+        <collection property="details" ofType="ArkDevApkVersionDetail" select="getArkDevApkVersionDetail" column="id">
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有版本 -->
+    <select id="getArkDevApkVersion" resultMap="ArkDevApkVersionMaps">
+		SELECT
+			t.id,
+			t.version_code,
+			t.version_name,
+			t.release_date
+		FROM
+			ark_dev_apk_version t
+		order by t.version_code desc
+	</select>
+
+    <select id="getArkDevApkVersionDetail" parameterType="long" resultType="ArkDevApkVersionDetail">
+		select
+			s.id,
+			s.version_id,
+			s.desc_msg
+		from ark_dev_apk_version_detail s
+		where version_id = #{id}
+	</select>
+</mapper>

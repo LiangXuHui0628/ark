@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.siro.ark.dao.ArkDevUserDao">
+
+    <sql id="base_select">
+        SELECT * FROM ark_dev_user a
+    </sql>
+
+    <!-- 根据登录名查询用户 -->
+    <select id="selectByLoginName" resultType="arkDevUser">
+	<include refid="base_select"></include>	WHERE a.loginname = #{loginName}
+	</select>
+
+
+</mapper>

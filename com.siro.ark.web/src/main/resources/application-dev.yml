@@ -1,0 +1,26 @@
+attach_path: /ark/attach/
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:efsdb
+    username: 123
+    password: 123
+    druid:
+      validationQuery: SELECT 1
+      initialSize: 10
+      minIdle: 10
+      maxActive: 200
+      minEvictableIdleTimeMillis: 180000
+      testOnBorrow: false
+      testWhileIdle: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 1800
+      logAbandoned: true
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 100
+
+server:
+  port: 8099
+  servlet:
+      context-path: /ark
